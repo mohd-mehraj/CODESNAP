@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+.App {
+  text-align: center;
+}
+
+body {
+  background-color: #d9f0fc !important;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Code window */
+
+.page-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.holder-background {
+  padding: 25px;
+  width: max-content;
+  border-radius: 5px;
+  margin-bottom: 140px;
+}
+
+.code-holder {
+  width: 500px;
+  border-radius: 15px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.45);
+}
+
+pre {
+  overflow: hidden !important;
+}
+
+::selection {
+  background: rgba(63, 63, 191, 0.2);
+}
+
+.code-holder textarea {
+  outline: none;
+}
+
+.top-bar {
+  display: flex;
+  padding: 10px;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  border-radius: 15px;
+  margin: 5px;
+}
+
+#dot1 {
+  background-color: #fc6058;
+}
+
+#dot2 {
+  background-color: #fec02f;
+}
+
+#dot3 {
+  background-color: #2aca3e;
+}
+
+/* Themes */
+
+.theme-bubble {
+  height: 25px;
+  width: 25px;
+  border-radius: 25px;
+  margin: 5px;
+  background: linear-gradient(140deg, rgb(165, 142, 251), rgb(233, 191, 248));
+  cursor: pointer;
+}
+
+.theme-bubble:hover {
+  transform: scale(1.3);
+}
+
+.theme-chooser {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.themes {
+  display: flex;
+  flex-direction: row;
+}
+
+.lilac {
+  background: linear-gradient(140deg, rgb(165, 142, 251), rgb(233, 191, 248));
+}
+
+.astra {
+  background-color: #85ffbd;
+  background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%);
+}
+
+.essence {
+  background-image: linear-gradient(
+    68.3deg,
+    rgba(245, 177, 97, 1) 0.4%,
+    rgba(236, 54, 110, 1) 100.2%
+  );
+}
+
+.neve {
+  background-color: #9eabe4;
+  background-image: linear-gradient(315deg, #9eabe4 0%, #77eed8 74%);
+}
+
+.light-mode {
+  color: black;
+  background-color: hsla(0, 0%, 100%, 0.75);
+}
+
+.light-mode span.string {
+  color: blue;
+}
+
+.dark-mode {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.title {
+  width: 70%;
+  margin-right: 70px;
+  outline: none;
+  font-family: "Fira code", "Fira Mono", monospace;
+}
+
+/* Mode Toggle */
+.mode-holder {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Language Select */
+.language-select {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.language-holder {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Bottom menu */
+.bottom-menu {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 720px;
+  padding: 24px;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px 0 rgb(0 0 0 / 60%);
+  background-color: #fff;
+}
+
+.download-btn {
+  border-radius: 5px;
+  background-color: rgba(217, 240, 252, 0.5);
+  padding: 0px 10px;
+  color: #569ec2;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.download-btn:hover {
+  background-color: rgba(217, 240, 252, 1);
+}
+
+/* Footer */
+.footer {
+  display: fixed;
+  position: fixed;
+  bottom: 0px;
+}
+
+/* Profile section */
+.profile-section {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  height: 75px;
+  width: 75px;
+}
+
+.profile-avatar {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  margin: 10px;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.profile-btn {
+  margin: 10px;
+  border-radius: 5px;
+  background-color: rgb(150, 214, 248);
+  padding: 10px;
+  color: #fff;
+  /* color: #569ec2; */
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.profile-drop-down {
+  display: none;
+  position: fixed;
+  top: 60px;
+  right: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px 0 rgb(0 0 0 / 60%);
+  background-color: #fff;
+}
+
+.profile-avatar:hover + .profile-drop-down {
+  display: block;
+}
+
+.profile-drop-down:hover {
+  display: block;
+}
+
+.profile-section:hover > .profile-drop-down {
+  display: block;
+}
+
+.profile-name {
+  text-transform: capitalize;
+  font-family: "Fira code", "Fira Mono", monospace;
+}
